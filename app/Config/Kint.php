@@ -2,7 +2,13 @@
 
 namespace Config;
 
+<<<<<<< HEAD
 use Kint\Parser\ConstructablePluginInterface;
+=======
+use CodeIgniter\Config\BaseConfig;
+use Kint\Parser\ConstructablePluginInterface;
+use Kint\Renderer\AbstractRenderer;
+>>>>>>> e130526 (pertemuan 9)
 use Kint\Renderer\Rich\TabPluginInterface;
 use Kint\Renderer\Rich\ValuePluginInterface;
 
@@ -16,7 +22,11 @@ use Kint\Renderer\Rich\ValuePluginInterface;
  *
  * @see https://kint-php.github.io/kint/ for details on these settings.
  */
+<<<<<<< HEAD
 class Kint
+=======
+class Kint extends BaseConfig
+>>>>>>> e130526 (pertemuan 9)
 {
     /*
     |--------------------------------------------------------------------------
@@ -40,6 +50,10 @@ class Kint
     */
     public string $richTheme = 'aante-light.css';
     public bool $richFolder  = false;
+<<<<<<< HEAD
+=======
+    public int $richSort     = AbstractRenderer::SORT_FULL;
+>>>>>>> e130526 (pertemuan 9)
 
     /**
      * @var array<string, class-string<ValuePluginInterface>>|null

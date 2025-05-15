@@ -50,16 +50,27 @@ Problems with it can be raised on our forum, or as issues in the main repository
 
 ## Server Requirements
 
+<<<<<<< HEAD
 PHP version 8.1 or higher is required, with the following extensions installed:
+=======
+PHP version 7.4 or higher is required, with the following extensions installed:
+>>>>>>> e130526 (pertemuan 9)
 
 - [intl](http://php.net/manual/en/intl.requirements.php)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
 
 > [!WARNING]
+<<<<<<< HEAD
 > - The end of life date for PHP 7.4 was November 28, 2022.
 > - The end of life date for PHP 8.0 was November 26, 2023.
 > - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
 > - The end of life date for PHP 8.1 will be December 31, 2025.
+=======
+> The end of life date for PHP 7.4 was November 28, 2022.
+> The end of life date for PHP 8.0 was November 26, 2023.
+> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
+> The end of life date for PHP 8.1 will be November 25, 2024.
+>>>>>>> e130526 (pertemuan 9)
 
 Additionally, make sure that the following extensions are enabled in your PHP:
 

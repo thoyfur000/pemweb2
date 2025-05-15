@@ -2,6 +2,7 @@
 
 namespace Config;
 
+<<<<<<< HEAD
 use CodeIgniter\Config\Filters as BaseFilters;
 use CodeIgniter\Filters\Cors;
 use CodeIgniter\Filters\CSRF;
@@ -14,15 +15,30 @@ use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
 
 class Filters extends BaseFilters
+=======
+use CodeIgniter\Config\BaseConfig;
+use CodeIgniter\Filters\CSRF;
+use CodeIgniter\Filters\DebugToolbar;
+use CodeIgniter\Filters\Honeypot;
+use CodeIgniter\Filters\InvalidChars;
+use CodeIgniter\Filters\SecureHeaders;
+
+class Filters extends BaseConfig
+>>>>>>> e130526 (pertemuan 9)
 {
     /**
      * Configures aliases for Filter classes to
      * make reading things nicer and simpler.
      *
+<<<<<<< HEAD
      * @var array<string, class-string|list<class-string>>
      *
      * [filter_name => classname]
      * or [filter_name => [classname1, classname2, ...]]
+=======
+     * @var array<string, class-string|list<class-string>> [filter_name => classname]
+     *                                                     or [filter_name => [classname1, classname2, ...]]
+>>>>>>> e130526 (pertemuan 9)
      */
     public array $aliases = [
         'csrf'          => CSRF::class,
@@ -30,6 +46,7 @@ class Filters extends BaseFilters
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+<<<<<<< HEAD
         'cors'          => Cors::class,
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
@@ -59,6 +76,8 @@ class Filters extends BaseFilters
             'performance', // Performance Metrics
             'toolbar',     // Debug Toolbar
         ],
+=======
+>>>>>>> e130526 (pertemuan 9)
     ];
 
     /**
@@ -74,6 +93,10 @@ class Filters extends BaseFilters
             // 'invalidchars',
         ],
         'after' => [
+<<<<<<< HEAD
+=======
+            'toolbar',
+>>>>>>> e130526 (pertemuan 9)
             // 'honeypot',
             // 'secureheaders',
         ],
@@ -84,7 +107,11 @@ class Filters extends BaseFilters
      * particular HTTP method (GET, POST, etc.).
      *
      * Example:
+<<<<<<< HEAD
      * 'POST' => ['foo', 'bar']
+=======
+     * 'post' => ['foo', 'bar']
+>>>>>>> e130526 (pertemuan 9)
      *
      * If you use this, you should disable auto-routing because auto-routing
      * permits any HTTP method to access a controller. Accessing the controller

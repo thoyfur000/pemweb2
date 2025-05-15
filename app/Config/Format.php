@@ -3,6 +3,10 @@
 namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
+<<<<<<< HEAD
+=======
+use CodeIgniter\Format\FormatterInterface;
+>>>>>>> e130526 (pertemuan 9)
 use CodeIgniter\Format\JSONFormatter;
 use CodeIgniter\Format\XMLFormatter;
 
@@ -61,4 +65,19 @@ class Format extends BaseConfig
         'application/xml'  => 0,
         'text/xml'         => 0,
     ];
+<<<<<<< HEAD
+=======
+
+    /**
+     * A Factory method to return the appropriate formatter for the given mime type.
+     *
+     * @return FormatterInterface
+     *
+     * @deprecated This is an alias of `\CodeIgniter\Format\Format::getFormatter`. Use that instead.
+     */
+    public function getFormatter(string $mime)
+    {
+        return Services::format()->getFormatter($mime);
+    }
+>>>>>>> e130526 (pertemuan 9)
 }

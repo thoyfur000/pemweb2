@@ -41,7 +41,10 @@ p.lead {
 .header {
     background: var(--light-bg-color);
     color: var(--dark-text-color);
+<<<<<<< HEAD
     margin-top: 2.17rem;
+=======
+>>>>>>> e130526 (pertemuan 9)
 }
 .header .container {
     padding: 1rem;
@@ -66,6 +69,7 @@ p.lead {
 }
 
 .environment {
+<<<<<<< HEAD
     background: var(--brand-primary-color);
     color: var(--main-bg-color);
     text-align: center;
@@ -73,6 +77,12 @@ p.lead {
     width: 100%;
     margin-top: -2.14rem;
     position: fixed;
+=======
+    background: var(--dark-bg-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 0.2rem;
+>>>>>>> e130526 (pertemuan 9)
 }
 
 .source {

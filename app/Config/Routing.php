@@ -19,7 +19,10 @@ use CodeIgniter\Config\Routing as BaseRouting;
 class Routing extends BaseRouting
 {
     /**
+<<<<<<< HEAD
      * For Defined Routes.
+=======
+>>>>>>> e130526 (pertemuan 9)
      * An array of files that contain route definitions.
      * Route files are read in order, with the first match
      * found taking precedence.
@@ -33,7 +36,10 @@ class Routing extends BaseRouting
     ];
 
     /**
+<<<<<<< HEAD
      * For Defined Routes and Auto Routing.
+=======
+>>>>>>> e130526 (pertemuan 9)
      * The default namespace to use for Controllers when no other
      * namespace has been specified.
      *
@@ -42,7 +48,10 @@ class Routing extends BaseRouting
     public string $defaultNamespace = 'App\Controllers';
 
     /**
+<<<<<<< HEAD
      * For Auto Routing.
+=======
+>>>>>>> e130526 (pertemuan 9)
      * The default controller to use when no other controller has been
      * specified.
      *
@@ -51,7 +60,10 @@ class Routing extends BaseRouting
     public string $defaultController = 'Home';
 
     /**
+<<<<<<< HEAD
      * For Defined Routes and Auto Routing.
+=======
+>>>>>>> e130526 (pertemuan 9)
      * The default method to call on the controller when no other
      * method has been set in the route.
      *
@@ -60,8 +72,12 @@ class Routing extends BaseRouting
     public string $defaultMethod = 'index';
 
     /**
+<<<<<<< HEAD
      * For Auto Routing.
      * Whether to translate dashes in URIs for controller/method to underscores.
+=======
+     * Whether to translate dashes in URIs to underscores.
+>>>>>>> e130526 (pertemuan 9)
      * Primarily useful when using the auto-routing.
      *
      * Default: false
@@ -97,7 +113,10 @@ class Routing extends BaseRouting
     public bool $autoRoute = false;
 
     /**
+<<<<<<< HEAD
      * For Defined Routes.
+=======
+>>>>>>> e130526 (pertemuan 9)
      * If TRUE, will enable the use of the 'prioritize' option
      * when defining routes.
      *
@@ -106,6 +125,7 @@ class Routing extends BaseRouting
     public bool $prioritize = false;
 
     /**
+<<<<<<< HEAD
      * For Defined Routes.
      * If TRUE, matched multiple URI segments will be passed as one parameter.
      *
@@ -116,6 +136,9 @@ class Routing extends BaseRouting
     /**
      * For Auto Routing (Improved).
      * Map of URI segments and namespaces.
+=======
+     * Map of URI segments and namespaces. For Auto Routing (Improved).
+>>>>>>> e130526 (pertemuan 9)
      *
      * The key is the first URI segment. The value is the controller namespace.
      * E.g.,
@@ -126,6 +149,7 @@ class Routing extends BaseRouting
      * @var array<string, string>
      */
     public array $moduleRoutes = [];
+<<<<<<< HEAD
 
     /**
      * For Auto Routing (Improved).
@@ -137,4 +161,6 @@ class Routing extends BaseRouting
      * Default: false
      */
     public bool $translateUriToCamelCase = true;
+=======
+>>>>>>> e130526 (pertemuan 9)
 }

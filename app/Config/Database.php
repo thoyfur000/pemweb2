@@ -10,12 +10,22 @@ use CodeIgniter\Database\Config;
 class Database extends Config
 {
     /**
+<<<<<<< HEAD
      * The directory that holds the Migrations and Seeds directories.
+=======
+     * The directory that holds the Migrations
+     * and Seeds directories.
+>>>>>>> e130526 (pertemuan 9)
      */
     public string $filesPath = APPPATH . 'Database' . DIRECTORY_SEPARATOR;
 
     /**
+<<<<<<< HEAD
      * Lets you choose which connection group to use if no other is specified.
+=======
+     * Lets you choose which connection group to
+     * use if no other is specified.
+>>>>>>> e130526 (pertemuan 9)
      */
     public string $defaultGroup = 'default';
 
@@ -34,8 +44,13 @@ class Database extends Config
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,
+<<<<<<< HEAD
         'charset'      => 'utf8mb4',
         'DBCollat'     => 'utf8mb4_general_ci',
+=======
+        'charset'      => 'utf8',
+        'DBCollat'     => 'utf8_general_ci',
+>>>>>>> e130526 (pertemuan 9)
         'swapPre'      => '',
         'encrypt'      => false,
         'compress'     => false,
@@ -43,6 +58,7 @@ class Database extends Config
         'failover'     => [],
         'port'         => 3306,
         'numberNative' => false,
+<<<<<<< HEAD
         'foundRows'    => false,
         'dateFormat'   => [
             'date'     => 'Y-m-d',
@@ -159,6 +175,13 @@ class Database extends Config
 
     /**
      * This database connection is used when running PHPUnit database tests.
+=======
+    ];
+
+    /**
+     * This database connection is used when
+     * running PHPUnit database tests.
+>>>>>>> e130526 (pertemuan 9)
      *
      * @var array<string, mixed>
      */
@@ -173,7 +196,11 @@ class Database extends Config
         'pConnect'    => false,
         'DBDebug'     => true,
         'charset'     => 'utf8',
+<<<<<<< HEAD
         'DBCollat'    => '',
+=======
+        'DBCollat'    => 'utf8_general_ci',
+>>>>>>> e130526 (pertemuan 9)
         'swapPre'     => '',
         'encrypt'     => false,
         'compress'    => false,
@@ -182,11 +209,14 @@ class Database extends Config
         'port'        => 3306,
         'foreignKeys' => true,
         'busyTimeout' => 1000,
+<<<<<<< HEAD
         'dateFormat'  => [
             'date'     => 'Y-m-d',
             'datetime' => 'Y-m-d H:i:s',
             'time'     => 'H:i:s',
         ],
+=======
+>>>>>>> e130526 (pertemuan 9)
     ];
 
     public function __construct()

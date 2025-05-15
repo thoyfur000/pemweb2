@@ -99,6 +99,7 @@ class Session extends BaseConfig
      * DB Group for the database session.
      */
     public ?string $DBGroup = null;
+<<<<<<< HEAD
 
     /**
      * --------------------------------------------------------------------------
@@ -124,4 +125,6 @@ class Session extends BaseConfig
      * seconds.
      */
     public int $lockMaxRetries = 300;
+=======
+>>>>>>> e130526 (pertemuan 9)
 }

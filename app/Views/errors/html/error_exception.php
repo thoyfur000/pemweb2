@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 use CodeIgniter\HTTP\Header;
+=======
+use Config\Services;
+>>>>>>> e130526 (pertemuan 9)
 use CodeIgniter\CodeIgniter;
 
 $errorId = uniqid('error', true);
@@ -60,10 +64,17 @@ $errorId = uniqid('error', true);
 
     <pre>
     Caused by:
+<<<<<<< HEAD
     <?= esc($prevException::class), esc($prevException->getCode() ? ' #' . $prevException->getCode() : '') ?>
 
     <?= nl2br(esc($prevException->getMessage())) ?>
     <a href="https://www.duckduckgo.com/?q=<?= urlencode($prevException::class . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $prevException->getMessage())) ?>"
+=======
+    <?= esc(get_class($prevException)), esc($prevException->getCode() ? ' #' . $prevException->getCode() : '') ?>
+
+    <?= nl2br(esc($prevException->getMessage())) ?>
+    <a href="https://www.duckduckgo.com/?q=<?= urlencode(get_class($prevException) . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $prevException->getMessage())) ?>"
+>>>>>>> e130526 (pertemuan 9)
        rel="noreferrer" target="_blank">search &rarr;</a>
     <?= esc(clean_path($prevException->getFile()) . ':' . $prevException->getLine()) ?>
     </pre>
@@ -120,7 +131,11 @@ $errorId = uniqid('error', true);
                                         <?php
                                         $params = null;
                                         // Reflection by name is not available for closure function
+<<<<<<< HEAD
                                         if (! str_ends_with($row['function'], '}')) {
+=======
+                                        if (substr($row['function'], -1) !== '}') {
+>>>>>>> e130526 (pertemuan 9)
                                             $mirror = isset($row['class']) ? new ReflectionMethod($row['class'], $row['function']) : new ReflectionFunction($row['function']);
                                             $params = $mirror->getParameters();
                                         }
@@ -224,7 +239,11 @@ $errorId = uniqid('error', true);
 
             <!-- Request -->
             <div class="content" id="request">
+<<<<<<< HEAD
                 <?php $request = service('request'); ?>
+=======
+                <?php $request = Services::request(); ?>
+>>>>>>> e130526 (pertemuan 9)
 
                 <table>
                     <tbody>
@@ -234,7 +253,11 @@ $errorId = uniqid('error', true);
                         </tr>
                         <tr>
                             <td>HTTP Method</td>
+<<<<<<< HEAD
                             <td><?= esc($request->getMethod()) ?></td>
+=======
+                            <td><?= esc(strtoupper($request->getMethod())) ?></td>
+>>>>>>> e130526 (pertemuan 9)
                         </tr>
                         <tr>
                             <td>IP Address</td>
@@ -318,6 +341,7 @@ $errorId = uniqid('error', true);
                             </tr>
                         </thead>
                         <tbody>
+<<<<<<< HEAD
                         <?php foreach ($headers as $name => $value) : ?>
                             <tr>
                                 <td><?= esc($name, 'html') ?></td>
@@ -332,6 +356,12 @@ $errorId = uniqid('error', true);
                                 }
                                 ?>
                                 </td>
+=======
+                        <?php foreach ($headers as $header) : ?>
+                            <tr>
+                                <td><?= esc($header->getName(), 'html') ?></td>
+                                <td><?= esc($header->getValueLine(), 'html') ?></td>
+>>>>>>> e130526 (pertemuan 9)
                             </tr>
                         <?php endforeach; ?>
                         </tbody>
@@ -342,7 +372,11 @@ $errorId = uniqid('error', true);
 
             <!-- Response -->
             <?php
+<<<<<<< HEAD
                 $response = service('response');
+=======
+                $response = Services::response();
+>>>>>>> e130526 (pertemuan 9)
                 $response->setStatusCode(http_response_code());
             ?>
             <div class="content" id="response">
@@ -355,6 +389,11 @@ $errorId = uniqid('error', true);
 
                 <?php $headers = $response->headers(); ?>
                 <?php if (! empty($headers)) : ?>
+<<<<<<< HEAD
+=======
+                    <?php natsort($headers) ?>
+
+>>>>>>> e130526 (pertemuan 9)
                     <h3>Headers</h3>
 
                     <table>
@@ -365,6 +404,7 @@ $errorId = uniqid('error', true);
                             </tr>
                         </thead>
                         <tbody>
+<<<<<<< HEAD
                         <?php foreach ($headers as $name => $value) : ?>
                             <tr>
                                 <td><?= esc($name, 'html') ?></td>
@@ -379,6 +419,12 @@ $errorId = uniqid('error', true);
                                 }
                                 ?>
                                 </td>
+=======
+                        <?php foreach (array_keys($headers) as $name) : ?>
+                            <tr>
+                                <td><?= esc($name, 'html') ?></td>
+                                <td><?= esc($response->getHeaderLine($name), 'html') ?></td>
+>>>>>>> e130526 (pertemuan 9)
                             </tr>
                         <?php endforeach; ?>
                         </tbody>

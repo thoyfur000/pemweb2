@@ -124,3 +124,8 @@ nb-configuration.xml
 
 /results/
 /phpunit*.xml
+<<<<<<< HEAD
+=======
+/.phpunit.*.cache
+
+>>>>>>> e130526 (pertemuan 9)

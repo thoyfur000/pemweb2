@@ -23,6 +23,7 @@ class Generators extends BaseConfig
      *
      * YOU HAVE BEEN WARNED!
      *
+<<<<<<< HEAD
      * @var array<string, array<string, string>|string>
      */
     public array $views = [
@@ -30,6 +31,13 @@ class Generators extends BaseConfig
             'class' => 'CodeIgniter\Commands\Generators\Views\cell.tpl.php',
             'view'  => 'CodeIgniter\Commands\Generators\Views\cell_view.tpl.php',
         ],
+=======
+     * @var array<string, string>
+     */
+    public array $views = [
+        'make:cell'         => 'CodeIgniter\Commands\Generators\Views\cell.tpl.php',
+        'make:cell_view'    => 'CodeIgniter\Commands\Generators\Views\cell_view.tpl.php',
+>>>>>>> e130526 (pertemuan 9)
         'make:command'      => 'CodeIgniter\Commands\Generators\Views\command.tpl.php',
         'make:config'       => 'CodeIgniter\Commands\Generators\Views\config.tpl.php',
         'make:controller'   => 'CodeIgniter\Commands\Generators\Views\controller.tpl.php',

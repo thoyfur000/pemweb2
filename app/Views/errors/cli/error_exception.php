@@ -3,7 +3,11 @@
 use CodeIgniter\CLI\CLI;
 
 // The main Exception
+<<<<<<< HEAD
 CLI::write('[' . $exception::class . ']', 'light_gray', 'red');
+=======
+CLI::write('[' . get_class($exception) . ']', 'light_gray', 'red');
+>>>>>>> e130526 (pertemuan 9)
 CLI::write($message);
 CLI::write('at ' . CLI::color(clean_path($exception->getFile()) . ':' . $exception->getLine(), 'green'));
 CLI::newLine();
@@ -14,7 +18,11 @@ while ($prevException = $last->getPrevious()) {
     $last = $prevException;
 
     CLI::write('  Caused by:');
+<<<<<<< HEAD
     CLI::write('  [' . $prevException::class . ']', 'red');
+=======
+    CLI::write('  [' . get_class($prevException) . ']', 'red');
+>>>>>>> e130526 (pertemuan 9)
     CLI::write('  ' . $prevException->getMessage());
     CLI::write('  at ' . CLI::color(clean_path($prevException->getFile()) . ':' . $prevException->getLine(), 'green'));
     CLI::newLine();
@@ -50,11 +58,28 @@ if (defined('SHOW_DEBUG_BACKTRACE') && SHOW_DEBUG_BACKTRACE) {
             $function .= $padClass . $error['function'];
         }
 
+<<<<<<< HEAD
         $args = implode(', ', array_map(static fn ($value): string => match (true) {
             is_object($value) => 'Object(' . $value::class . ')',
             is_array($value)  => $value !== [] ? '[...]' : '[]',
             $value === null   => 'null', // return the lowercased version
             default           => var_export($value, true),
+=======
+        $args = implode(', ', array_map(static function ($value) {
+            switch (true) {
+                case is_object($value):
+                    return 'Object(' . get_class($value) . ')';
+
+                case is_array($value):
+                    return count($value) ? '[...]' : '[]';
+
+                case $value === null:
+                    return 'null'; // return the lowercased version
+
+                default:
+                    return var_export($value, true);
+            }
+>>>>>>> e130526 (pertemuan 9)
         }, array_values($error['args'] ?? [])));
 
         $function .= '(' . $args . ')';

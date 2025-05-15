@@ -36,6 +36,40 @@ class Cache extends BaseConfig
 
     /**
      * --------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
+     * Cache Directory Path
+     * --------------------------------------------------------------------------
+     *
+     * The path to where cache files should be stored, if using a file-based
+     * system.
+     *
+     * @deprecated Use the driver-specific variant under $file
+     */
+    public string $storePath = WRITEPATH . 'cache/';
+
+    /**
+     * --------------------------------------------------------------------------
+     * Cache Include Query String
+     * --------------------------------------------------------------------------
+     *
+     * Whether to take the URL query string into consideration when generating
+     * output cache files. Valid options are:
+     *
+     *    false = Disabled
+     *    true  = Enabled, take all query parameters into account.
+     *            Please be aware that this may result in numerous cache
+     *            files generated for the same page over and over again.
+     *    ['q'] = Enabled, but only take into account the specified list
+     *            of query parameters.
+     *
+     * @var bool|list<string>
+     */
+    public $cacheQueryString = false;
+
+    /**
+     * --------------------------------------------------------------------------
+>>>>>>> e130526 (pertemuan 9)
      * Key Prefix
      * --------------------------------------------------------------------------
      *
@@ -74,7 +108,10 @@ class Cache extends BaseConfig
      * --------------------------------------------------------------------------
      * File settings
      * --------------------------------------------------------------------------
+<<<<<<< HEAD
      *
+=======
+>>>>>>> e130526 (pertemuan 9)
      * Your file storage preferences can be specified below, if you are using
      * the File driver.
      *
@@ -89,7 +126,10 @@ class Cache extends BaseConfig
      * -------------------------------------------------------------------------
      * Memcached settings
      * -------------------------------------------------------------------------
+<<<<<<< HEAD
      *
+=======
+>>>>>>> e130526 (pertemuan 9)
      * Your Memcached servers can be specified below, if you are using
      * the Memcached drivers.
      *
@@ -139,6 +179,7 @@ class Cache extends BaseConfig
         'redis'     => RedisHandler::class,
         'wincache'  => WincacheHandler::class,
     ];
+<<<<<<< HEAD
 
     /**
      * --------------------------------------------------------------------------
@@ -158,4 +199,6 @@ class Cache extends BaseConfig
      * @var bool|list<string>
      */
     public $cacheQueryString = false;
+=======
+>>>>>>> e130526 (pertemuan 9)
 }
