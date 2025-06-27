@@ -269,8 +269,8 @@
 
             <h1>Welcome to Biodata </h1>
 
-            <h2>NAMA: Raihan Salman Alfarisi</h2>
-            <h2>HOBI: Manceng</h2>
+            <h2>NAMA: Ali Muhammad Thoyfur Ahsyai</h2>
+            <h2>HOBI: Membaca</h2>
 
         </div>
 
